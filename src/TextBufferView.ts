@@ -3,12 +3,18 @@ import {isHexString} from "./utils/isHexString";
 import {isBase64} from "./utils/isBase64";
 import {isBase64Url} from "./utils/isBase64Url";
 
+function isValidBuffer(input: unknown) {
+	if (input instanceof ArrayBuffer || ArrayBuffer.isView(input) || Buffer.isBuffer(input)) {
+		return !(input instanceof DataView);
+	}
+	return false;
+}
+
 export class TextBufferView {
 	constructor(private buffer: ArrayBuffer) {
-		if (!ArrayBuffer.isView(buffer) || buffer instanceof DataView) {
+		if (!isValidBuffer(buffer)) {
 			throw new TypeError('Invalid ArrayBuffer');
 		}
-
 		Object.freeze(this);
 	}
 
