@@ -41,26 +41,6 @@ TextBufferView {
 }
 `;
 
-exports[`TextBufferView base64 should create from string 2`] = `
-TextBufferView {
-  "buffer": {
-    "data": [
-      159,
-      103,
-      252,
-      108,
-      17,
-      217,
-      16,
-      95,
-      159,
-      235,
-    ],
-    "type": "Buffer",
-  },
-}
-`;
-
 exports[`TextBufferView base64url should create from string 1`] = `
 TextBufferView {
   "buffer": {
