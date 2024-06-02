@@ -1,0 +1,182 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextBufferView ascii should create from string 1`] = `
+TextBufferView {
+  "buffer": {
+    "data": [
+      97,
+      115,
+      99,
+      105,
+      105,
+      32,
+      99,
+      104,
+      97,
+      114,
+      115,
+    ],
+    "type": "Buffer",
+  },
+}
+`;
+
+exports[`TextBufferView base64 should create from string 1`] = `
+TextBufferView {
+  "buffer": {
+    "data": [
+      29,
+      144,
+      116,
+      160,
+      7,
+      213,
+      67,
+      207,
+      116,
+      180,
+    ],
+    "type": "Buffer",
+  },
+}
+`;
+
+exports[`TextBufferView base64 should create from string 2`] = `
+TextBufferView {
+  "buffer": {
+    "data": [
+      159,
+      103,
+      252,
+      108,
+      17,
+      217,
+      16,
+      95,
+      159,
+      235,
+    ],
+    "type": "Buffer",
+  },
+}
+`;
+
+exports[`TextBufferView hex should create from string 1`] = `
+TextBufferView {
+  "buffer": {
+    "data": [
+      96,
+      205,
+      172,
+      139,
+      57,
+      56,
+      241,
+      136,
+      237,
+      96,
+      28,
+      202,
+      70,
+      21,
+      1,
+      150,
+      218,
+      31,
+      241,
+      196,
+    ],
+    "type": "Buffer",
+  },
+}
+`;
+
+exports[`TextBufferView utf8 should create from string 1`] = `
+TextBufferView {
+  "buffer": Uint8Array [
+    200,
+    149,
+    205,
+    180,
+    42,
+    230,
+    164,
+    187,
+    242,
+    149,
+    176,
+    177,
+    233,
+    186,
+    145,
+    209,
+    169,
+    238,
+    139,
+    145,
+    43,
+    214,
+    179,
+    235,
+    162,
+    156,
+    49,
+    241,
+    146,
+    169,
+    142,
+    215,
+    162,
+    113,
+    71,
+    199,
+    164,
+    243,
+    187,
+    154,
+    169,
+    240,
+    145,
+    138,
+    181,
+    242,
+    188,
+    188,
+    138,
+    230,
+    129,
+    179,
+    207,
+    154,
+    109,
+    236,
+    138,
+    186,
+    196,
+    172,
+    234,
+    132,
+    169,
+    243,
+    174,
+    173,
+    183,
+    241,
+    136,
+    165,
+    135,
+    243,
+    165,
+    183,
+    189,
+    225,
+    139,
+    175,
+    45,
+    241,
+    134,
+    135,
+    179,
+  ],
+}
+`;
