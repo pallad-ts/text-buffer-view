@@ -8,7 +8,7 @@ jobs:
   main_job:
     executor:
       name: node/default
-      tag: "18"
+      tag: "18.20.3"
     steps:
       - checkout
       - node/install-packages
