@@ -15,6 +15,10 @@ describe('TextBufferView', () => {
 				TextBufferView.fromString('zzz', 'hex');
 			}).toThrowError('Invalid hex string');
 		});
+
+		it('allows using empty string', () => {
+			expect(TextBufferView.fromString('', 'hex').originalArrayBuffer.byteLength).toBe(0)
+		})
 	});
 
 	describe('base64', () => {
@@ -30,9 +34,13 @@ describe('TextBufferView', () => {
 				TextBufferView.fromString(')(123asd', 'base64');
 			}).toThrowError('Invalid base64 string');
 		});
+
+		it('allows using empty string', () => {
+			expect(TextBufferView.fromString('', 'base64').originalArrayBuffer.byteLength).toBe(0)
+		})
 	});
 
-	describe('base64', () => {
+	describe('base64url', () => {
 		it('should create from string', () => {
 			const input = 'n2f8bBHZEF-f6w';
 			const buffer = TextBufferView.fromString(input, 'base64url');
@@ -45,6 +53,10 @@ describe('TextBufferView', () => {
 				TextBufferView.fromString(')(123asd', 'base64url');
 			}).toThrowError('Invalid base64url string');
 		});
+
+		it('allows using empty string', () => {
+			expect(TextBufferView.fromString('', 'base64url').originalArrayBuffer.byteLength).toBe(0)
+		})
 	});
 
 	describe('ascii', () => {
@@ -54,6 +66,10 @@ describe('TextBufferView', () => {
 			expect(buffer.toString('ascii')).toBe(input);
 			expect(buffer).toMatchSnapshot();
 		});
+
+		it('allows using empty string', () => {
+			expect(TextBufferView.fromString('', 'ascii').originalArrayBuffer.byteLength).toBe(0)
+		})
 	});
 
 	describe('utf8', () => {

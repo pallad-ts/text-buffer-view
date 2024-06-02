@@ -54,6 +54,10 @@ export class TextBufferView {
 	}
 
 	static fromString(input: string, encoding: Encoding) {
+		if (input === '') {
+			return new TextBufferView(new ArrayBuffer(0));
+		}
+
 		if (encoding === 'utf8') {
 			return new TextBufferView(new TextEncoder().encode(input));
 		}
