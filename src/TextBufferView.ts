@@ -27,16 +27,22 @@ export class TextBufferView {
 	}
 
 	/**
-	 * Returns copy of buffer
+	 * Returns copy of a buffer
 	 */
 	get arrayBuffer() {
 		return this.buffer.slice(0)
 	}
 
+	/**
+	 * Creates TextBufferView from buffer
+	 */
 	static fromBuffer(buffer: Buffer) {
 		return new TextBufferView(buffer);
 	}
 
+	/**
+	 * Creates TextBufferView from array buffer
+	 */
 	static fromArrayBuffer(arrayBuffer: ArrayBuffer) {
 		return new TextBufferView(arrayBuffer);
 	}
